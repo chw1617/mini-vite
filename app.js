@@ -20,17 +20,15 @@ app.use(ctx=>{
         ctx.type = 'application/javascript'
         ctx.body = replaceImport(jsContent)
     }else if(url.startsWith('/@modules/')){
-        if(url.startsWith('/@modules/')) {
-            // 获取@modules后面的部分，模块名称
-            const moduleName = url.replace('/@modules/', '')
-            const prefix = path.join(__dirname, './node_modules', moduleName)
-            // 要加载文件的地址
-            const module = require(prefix + '/package.json').module
-            const filePath = path.join(prefix, module)
-            const res = fs.readFileSync(filePath, 'utf8')
-            ctx.type = "text/javascript" 
-            ctx.body = replaceImport(res) // 在其内部可能还存在import代码，所以也需要重写一下
-         }
+        // 获取@modules后面的部分，模块名称
+        const moduleName = url.replace('/@modules/', '')
+        const prefix = path.join(__dirname, './node_modules', moduleName)
+        // 要加载文件的地址
+        const module = require(prefix + '/package.json').module
+        const filePath = path.join(prefix, module)
+        const res = fs.readFileSync(filePath, 'utf8')
+        ctx.type = "text/javascript" 
+        ctx.body = replaceImport(res) // 在其内部可能还存在import代码，所以也需要重写一下
     }
     
 })
