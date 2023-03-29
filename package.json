@@ -10,6 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vue/compiler-dom": "^3.2.47",
+    "@vue/compiler-sfc": "^3.2.47",
+    "@vue/reactivity": "^3.2.47",
+    "@vue/runtime-core": "^3.2.47",
+    "@vue/runtime-dom": "^3.2.47",
+    "@vue/shared": "^3.2.47",
     "koa": "^2.14.1",
     "vue": "^3.2.47"
   }

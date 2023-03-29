@@ -1,10 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@vue/compiler-dom': ^3.2.47
+  '@vue/compiler-sfc': ^3.2.47
+  '@vue/reactivity': ^3.2.47
+  '@vue/runtime-core': ^3.2.47
+  '@vue/runtime-dom': ^3.2.47
+  '@vue/shared': ^3.2.47
   koa: ^2.14.1
   vue: ^3.2.47
 
 dependencies:
+  '@vue/compiler-dom': registry.npmmirror.com/@vue/compiler-dom/3.2.47
+  '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc/3.2.47
+  '@vue/reactivity': registry.npmmirror.com/@vue/reactivity/3.2.47
+  '@vue/runtime-core': registry.npmmirror.com/@vue/runtime-core/3.2.47
+  '@vue/runtime-dom': registry.npmmirror.com/@vue/runtime-dom/3.2.47
+  '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.47
   koa: registry.npmmirror.com/koa/2.14.1
   vue: registry.npmmirror.com/vue/3.2.47
 
